@@ -1,38 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color:#464646;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("https://media.istockphoto.com/photos/beautiful-woman-with-evening-glamorous-makeup-with-a-huge-chain-on-picture-id1303985878?k=20&m=1303985878&s=612x612&w=0&h=RxQA8UcrAVtUqS38iaH59xjeDJBzsn5ogGPqdx1srPM=");
+  background-position: center;
+  background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.App .isi{
+  width: 200px;
+  height: 200px;
+  cursor: move;
+  transition: all ease-in-out 0.03s;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.5;
+  background-color: black;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.slide_container{
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background-color: beige;
+  width: 40%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.slide_container .bar{
+  margin-top: 30px;
+  position: absolute;
+  z-index: 1;
+  background-color: #ff1313;
+  left: 2px;
+  top: 7px;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.slide_container .slider{
+  margin-top: 37px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  z-index: 2;
+  position: relative;
+  background-color: #ff131300;
+  outline: none;
+}
+
+.slide_container .slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
+  cursor: pointer;
+  transition: all ease-in-out 0.03s;
+}
+
+.slide_container .slider::-webkit-slider-thumb:hover{
+  background-color: #ff1313;
+  box-shadow: #ff00004e 0px 0px 0px 10px;
+}
+
+
+.slide_container .slider:active::-webkit-slider-thumb{
+  box-shadow: #ffa6004e 0px 0px 0px 16px;
 }
